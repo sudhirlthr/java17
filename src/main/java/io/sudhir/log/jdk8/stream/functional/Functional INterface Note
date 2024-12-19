@@ -1,0 +1,30 @@
+1. Function<T, R>: A functional interface which accepts a parameter and either same type or different type of output.
+a. USE: Maps an object from one type to another type.
+2. Consumer<T>: this functional interface's abstract method accepts an argument and doesn't return anything.
+a. USE: for iterating over many objects.
+3. Predicate: this functional interface's abstract method accepts an argument and return a boolean type.
+a. USE: Use to filter operation and collection of objects
+4. Lambda: a method which implements single method defined in a functional interface.
+5. Stream: A powerful way to process data source like Collection and Arrays.
+a. Stream could be treated as Pipeline where it passes through 2 phases: 1: intermediate operations (like map & filter: input is a stream and output is a stream) and 2: terminal operations (like reduce which produce outputs and forEach which does not produce any output)
+
+6. 3 ways to generates Stream:
+a. From Collection.
+b. From Array using Arrays.
+c. From Stream class itself like Stream.of("a", "b").
+
+7. Reduce: a terminal operation where streams of data from pipeline can get reduce to single records.
+8. ForEach: Non-deterministic: doesn’t guaranteed processing order.
+9. Method reference: Can be used for:
+a. static method of a class.
+b. Instance methods of a class.
+c. Constructor
+10. Sequential Vs Parallel stream:
+a. PS is not always best choice because it depends:
+aa.PS would be good choice when handling large number of items which uses ForkJoinPool threading which uses cores available on CPUs.
+
+b: Some Datasource works better than others like List or Arrays could be one good source source split while IO based datasource like LinkedLIst or File PS have to overhead to split the work.
+c: target hardware.
+
+
+

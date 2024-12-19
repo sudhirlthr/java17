@@ -1,0 +1,45 @@
+Jdk 17 comes with total 14 JDK Enhancement proposal(JEP)
+1. JEP 409:
+    a. Sealed classes: This feature restrict which class or interface needs to extend or implement respectively.
+        -> It allow author of class/interface to control which class/interface will be allowed to implement it.
+        -> Though we have already final and private access modifier, but sealed classes/interface provide declarative way to use than access
+            modifier to restrict the use of superclass. Meaning Sealed classes would be widely accessible rather widely extendable.
+        -> It supports pattern matching feature which comes with jdk17.
+        -> Sealer classes and their permitted subclasses should on same package.
+        -> All sealed class's subclasses must either be final, sealed or non-sealed
+
+2. JEP 406:
+    a. Preview feature of Pattern matching for Switch Expression and Statement.
+        -> pattern matching on switch allows an expression to be tested against number of specified pattern, each with specific action.
+        -> This feature also allows to validate pattern matching with null case where on previous version it has be if block for
+            checking null values and eliminating NullPointerException.
+        -> Have to carefully put condition like e.g: on 2nd case : case Integer i: String.format("value of i is %d", i) then since I is not initialized it can give error.
+
+3. JEP 356:
+    a. Enhanced Pseudo-Random Number Generators(PRNGs):
+        -> On old java libraries there way no common interface for Random number Generator so that it was hard to keep common interface between available PRNG.
+        -> on Previous PRNG algorithm was not constant so that it was not generating desired value as per exepectation.
+        -> use 2 widely used alog: Xoroshiro128/256PlusPlus algo
+
+4. JEP 382:
+    a. New MacOs Rendering Pipeline:
+        -> From 2018 apple removes OpenGl library from macOs, so Metal pipeline has been introduced on jdk17, though openGL is default pipeline but Metal pipeline gets used if openGL faile over.
+
+5. JEP 415:
+    a. Context Specific Deserialization Filter:
+        -> For Each individual deserialization operation, this feature allow application to configure context-specific & dynamically-selected deserialization filter via JVM-wise filter factory which was introduced on jdk9.
+        -> This JEP introduces configurable JVM-wide filter factory, so whenever an ObjectInoutStream is created, its per Stream filter is initialized to the value returned by JVM-wide filter factory.
+            Thus these filters are dynamic & context-specific.
+
+
+6. JEP 412:
+    a. Foreign Function & Memory API Incubator:
+        -> Changes on Native library to support other language e.g: C so that this API allow Java programs to safely & efficiently access foreign memory outside of Java Heap.
+
+7. JEP 414:
+    a. Vector API Incubator
+        -> It allows to take advantage of Single Instruction Multiple Data(SIMD) available on most modern CPUs by providing initial iteration of an API to
+            express vector Computation that reliable compile at run time to optimal hardware instruction on supported CPU architecture, and thus achieve superior performance.
+        -> e.g: Characters operation: copying chars between short vectors and char arrays.
+
+8.
