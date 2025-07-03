@@ -1,0 +1,53 @@
+jdk 9:
+    a. Java Linker(jlink): for creating custom run time, which helps to
+        identify which module our application/module needs instead of loading all 300 MB Java SE.
+    b. Java Dependency Analyser(jdeps): It can be used for determining the dependency of JDK internal libraries.
+    c. Java Shell(jshell): it allows to explore JAVA API without compiling it.
+    d. Collection Factories: It allows to create collection of elements with single : Collectios.of("a", "b");
+    e. Deserialization filter: jdk 9 allows deserialization filter to specify which object would go for serialization and which would not go for serialization which improves both security and robustness.
+
+
+
+jdk10:
+    a. Local Variable Type interference:
+        -> Since declaration or initialization of class/variable is already
+            comes with default initialisation, then removal of type declaration
+             comes with jdk 10 and use VAR instead of TYPE declaration
+
+jdk11:
+    a. Launch Single File source file/code without compiling with javac, so just executing through java -cp <external-library> HelloWorld.java
+    b. Flight recorder:
+        -> It enables to get Fine grained event logging for:
+            => Garbage Collection, JIT compilation, locks and class loading etc.
+            => Events: JAVA API allows adding custom, user defined events.
+    c. Http2 client:
+        -> It supports Asynchronous implementation based on CompletableFuture.
+        -> Supports non-blocking request and response.
+        -> Provide better traceability data flow.
+    d. ZGC: A better GC for more than 128 GB of heap size as preview and on jdk15 it became permanent.
+
+
+
+jdk 14:
+    a. Switch statement and expression: with more concise  manner rather more clutter way with null checker.
+    b. Better NullPointerException for variables which is cumbersome for assignment to another variable.
+
+jdk 15:
+    a. Text Block: remove clutter multiline with String concatenation with 3 double quotes.
+
+jdk 16:
+    a. Records: Wrapper for data with elimination of boiler plate code: record Person(String name, String email).
+    b. Pattern matching for instanceOf: if(obj instanceOf String s) is more concise wrt type-casting and getting instance of String.
+    c. Java Package(jpackage): Bundles the application into installable package for example: on windows requires .msi/.exe package type requires to run the application.
+
+
+
+jdk 17:
+    a. Sealed classes: restrict the use of classes/interface with permitted at super class level but sub classes must be either of 3 type again: sealed, non-sealed or final.
+
+jdk 19:
+    a. Pattern matching for switch with Guarded pattern: like what we saw on jdk 17.
+    b.
+
+
+

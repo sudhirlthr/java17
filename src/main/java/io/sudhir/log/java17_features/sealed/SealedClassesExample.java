@@ -50,3 +50,10 @@ non-sealed class TransparentCircle extends Circle{
         System.out.println("In TransparentCircle sub-class of Circle Super class");
     }
 }
+
+class abc extends TransparentCircle{
+    @Override
+    public void printShapeType() {
+        super.printShapeType();
+    }
+}

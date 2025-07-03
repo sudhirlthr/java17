@@ -42,4 +42,24 @@ Jdk 17 comes with total 14 JDK Enhancement proposal(JEP)
             express vector Computation that reliable compile at run time to optimal hardware instruction on supported CPU architecture, and thus achieve superior performance.
         -> e.g: Characters operation: copying chars between short vectors and char arrays.
 
-8.
+8. JEP 403:
+    a. Strongly Encapsulate JDK internals by defaults
+
+9 JEP 306:
+    a. Restore Always-Strict Floating-Point Semantics
+
+
+Deprecation
+10. JEP 398:
+    a. Applet API: deprecated since jdk9 and from 17 no web browser support applet any more.
+
+11. JEP 411:
+    a. Security Manager:
+        -> Was used extensively for running applets in sandbox and was costly manage.
+
+12. JEP 407:
+    a. RMI Activation:
+        -> jdk 17 no longer include RMI activation was derrecated from jdk 15 but other RMI is unaffected.
+
+
+
